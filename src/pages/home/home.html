@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Dota 2 Heroes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let hero of heroes" (click)="viewHero(hero)">
+      <ion-avatar item-start>
+        <img [src]="hero.imageUrl" alt="">
+      </ion-avatar>
+      <h2>{{ hero.localized_name }}</h2>
+      <p>{{ hero.roles }}</p>
+    </button>
+  </ion-list>
+</ion-content>
